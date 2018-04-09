@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.test.apnacomplex.modules.ui.DocumentListActivity"
+    android:id="@+id/activity_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Toolbar -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/doc_list_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_icon"
+                        android:layout_width="@dimen/bac_icon_size"
+                        android:layout_height="@dimen/bac_icon_size"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/back_ic"
+                        android:layout_marginLeft="@dimen/default_double_margin"/>
+
+                    <com.test.apnacomplex.custom.CustomTextView
+                        android:id="@+id/toolbar_doc_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/back_icon"
+                        app:typeface="roboto_condensed_bold"
+                        android:text="Document"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="@dimen/default_margin"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/default_double_margin">
+
+                        <ImageView
+                            android:layout_width="@dimen/bac_icon_size"
+                            android:layout_height="@dimen/bac_icon_size"
+                            android:src="@drawable/search_ic"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/bac_icon_size"
+                            android:layout_height="@dimen/bac_icon_size"
+                            android:src="@drawable/more_ic"
+                            android:layout_marginLeft="@dimen/default_margin"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <!-- List header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <com.test.apnacomplex.custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Files"
+                    android:layout_marginLeft="@dimen/default_double_margin"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:typeface="roboto"/>
+
+                <LinearLayout
+                    android:id="@+id/name_sort_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/default_double_margin">
+
+                    <com.test.apnacomplex.custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Names"
+                        app:typeface="roboto"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_alignParentLeft="true"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/sort_ic"
+                        android:layout_marginLeft="@dimen/default_margin"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#404040"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="4dp"/>
+
+            </RelativeLayout>
+
+            <!-- Doc list -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/doc_list_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/doc_list_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_add"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:backgroundTint="@color/fab_color"
+            app:pressedTranslationZ="12dp"
+            android:layout_margin="@dimen/default_double_margin"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

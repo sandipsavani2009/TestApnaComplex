@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/doc_list_item_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="@dimen/doc_list_item_min_height"
+        android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/doc_icon_box_size"
+        android:layout_height="@dimen/doc_icon_box_size"
+        android:background="@drawable/doc_icon_box"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/default_margin">
+
+        <ImageView
+            android:id="@+id/doc_imgView"
+            android:layout_width="@dimen/doc_icon_size"
+            android:layout_height="@dimen/doc_icon_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/default_margin">
+
+        <com.test.apnacomplex.custom.CustomTextView
+            android:id="@+id/doc_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            app:typeface="roboto"/>
+
+        <com.test.apnacomplex.custom.CustomTextView
+            android:id="@+id/doc_size_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            app:typeface="roboto_light"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/doc_view_options_textView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="&#8942;"
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_marginRight="@dimen/default_margin"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+</LinearLayout>

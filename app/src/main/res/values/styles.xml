@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <declare-styleable name="AutoLoadImageView">
+        <attr name="defaultImage" format="reference" />
+        <attr name="errorImage" format="reference" />
+        <attr name="showAnimation" format="boolean" />
+
+        <attr name="fillType" format="enum">
+            <enum name="width" value="1" />
+            <enum name="height" value="2" />
+        </attr>
+
+        <attr name="cropType">
+            <flag name="left" value="1" />
+            <flag name="top" value="2" />
+            <flag name="right" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+    </declare-styleable>
+
+</resources>
